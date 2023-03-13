@@ -8,6 +8,8 @@ export const ContainerSessao = styled.div`
   padding: 30px 3% 30px 3%;
   width: 100%;
   max-height: 85px;
+
+  overflow-x: scroll;
 `;
 
 export const Chegada = styled.div`
@@ -22,7 +24,7 @@ export const Chegada = styled.div`
 
 export const TextoHorario = styled.text`
   color: #ffe712;
-  font-size: 1 rem;
+  font-size: 1rem;
 `;
 export const ContainerInfoUsuario = styled.div`
   display: flex;
@@ -38,17 +40,17 @@ export const ContainerNomeStatus = styled.div`
 
 export const TextoNome = styled.p`
   color: #f5f5f5;
-  font-size: 1 em;
+  font-size: 1em;
   line-height: 19px;
 `;
 
 export const TextoStatus = styled.p`
   color: #d2d2d2;
-  font-size: 1 em;
+  font-size: 1em;
   line-height: 19px;
   font-weight: 300;
 `;
 export const TextoCargo = styled.p`
   color: #ffe712;
-  font-size: 1 rem;
+  font-size: 1rem;
 `;

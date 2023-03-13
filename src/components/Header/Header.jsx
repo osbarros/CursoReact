@@ -1,4 +1,12 @@
-import { Container, IconButton, IconButtonsContainer, Logo } from "./Styles";
+import {
+  Container,
+  Logo,
+  IconButtonsContainer,
+  IconButton,
+  Divider,
+} from "./Styles";
+import { BsPencilSquare } from "react-icons/bs";
+import { IoExitOutline } from "react-icons/io5";
 import logo from "../../assets/logo.png";
 
 export default function Header() {
@@ -6,8 +14,13 @@ export default function Header() {
     <Container>
       <Logo src={logo} alt="CPE logo" />
       <IconButtonsContainer>
-        <IconButton>Editar</IconButton>
-        <IconButton>Logout</IconButton>
+        <IconButton>
+          <BsPencilSquare />
+        </IconButton>
+        <Divider />
+        <IconButton>
+          <IoExitOutline />
+        </IconButton>
       </IconButtonsContainer>
     </Container>
   );

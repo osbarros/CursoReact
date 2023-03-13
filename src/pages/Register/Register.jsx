@@ -4,7 +4,11 @@ import { Container, Inputs } from "./Styles";
 export default function Register() {
   return (
     <Container>
-      <Title text="CADASTRO" />
+      <Title
+        text="CADASTRO"
+        marginBottom="52px"
+        responsiveMarginBottom="50px"
+      />
       <Inputs>
         <FormInput name="email" type="email" placeHolder="E-mail" />
         <FormInput name="password" type="password" placeHolder="Senha" />

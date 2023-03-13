@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const firtsBreakPoint = "700px";
+const firstBreakPoint = "700px";
 const secondBreakPoint = "500px";
 
 export const Container = styled.div`
@@ -65,7 +65,7 @@ export const Button = styled.button`
     opacity: 0.7;
   }
 
-  @media (max-width: ${firtsBreakPoint}) {
+  @media (max-width: ${firstBreakPoint}) {
     font-size: 26px;
   }
 

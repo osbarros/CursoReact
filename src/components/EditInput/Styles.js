@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const firtsBreakPoint = "500px";
+const firstBreakPoint = "500px";
 
 export const Container = styled.div`
   display: flex;
@@ -9,7 +9,7 @@ export const Container = styled.div`
 
   width: 100%;
 
-  @media (max-width: ${firtsBreakPoint}) {
+  @media (max-width: ${firstBreakPoint}) {
     flex-direction: column;
     gap: 10px;
   }
@@ -24,7 +24,7 @@ export const Label = styled.label`
 
   color: ${(props) => props.theme.colors.primary};
 
-  @media (max-width: ${firtsBreakPoint}) {
+  @media (max-width: ${firstBreakPoint}) {
     font-size: 16px;
     text-align: left;
   }

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const firtsBreakPoint = "500px";
+const firstBreakPoint = "500px";
 
 export const Container = styled.div`
   display: flex;

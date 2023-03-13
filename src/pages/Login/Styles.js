@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const firtsBreakPoint = "500px";
+const firstBreakPoint = "500px";
 
 export const Container = styled.div`
   display: flex;
@@ -14,7 +14,7 @@ export const Container = styled.div`
   width: 100%;
   height: 100%;
 
-  @media (max-width: ${firtsBreakPoint}) {
+  @media (max-width: ${firstBreakPoint}) {
     padding: 0 50px;
   }
 `;
@@ -44,7 +44,7 @@ export const RegisterLink = styled.small`
     }
   }
 
-  @media (max-width: ${firtsBreakPoint}) {
+  @media (max-width: ${firstBreakPoint}) {
     margin-top: 19px;
 
     font-size: 12px;

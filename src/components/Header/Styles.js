@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const firtsBreakPoint = "500px";
+const firstBreakPoint = "500px";
 const secondBreakPoint = "300px";
 
 export const Container = styled.header`
@@ -15,7 +15,7 @@ export const Container = styled.header`
 
   background-color: ${(props) => props.theme.colors.primary};
 
-  @media (max-width: ${firtsBreakPoint}) {
+  @media (max-width: ${firstBreakPoint}) {
     height: 90px;
 
     padding: 11px 23px;
@@ -25,7 +25,7 @@ export const Container = styled.header`
 export const Logo = styled.img`
   width: 232px;
 
-  @media (max-width: ${firtsBreakPoint}) {
+  @media (max-width: ${firstBreakPoint}) {
     width: 130px;
   }
 
@@ -47,7 +47,7 @@ export const IconButtonsContainer = styled.div`
   border: 2px solid ${(props) => props.theme.colors.background};
   border-radius: 10px;
 
-  @media (max-width: ${firtsBreakPoint}) {
+  @media (max-width: ${firstBreakPoint}) {
     max-width: 100px;
   }
 
@@ -72,7 +72,7 @@ export const IconButton = styled.button`
     width: 50px;
     height: 50px;
 
-    @media (max-width: ${firtsBreakPoint}) {
+    @media (max-width: ${firstBreakPoint}) {
       width: 35px;
       height: 35px;
     }
@@ -88,7 +88,7 @@ export const Divider = styled.div`
   height: 60px;
   border-right: 2px solid ${(props) => props.theme.colors.background};
 
-  @media (max-width: ${firtsBreakPoint}) {
+  @media (max-width: ${firstBreakPoint}) {
     height: 45px;
   }
 

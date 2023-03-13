@@ -1,7 +1,16 @@
-import { Chegada, ContainerInfoUsuario, ContainerSessao, ContainerNomeStatus, TextoCargo, TextoHorario, TextoNome, TextoStatus } from "./Styles";
+import {
+  Chegada,
+  ContainerInfoUsuario,
+  ContainerSessao,
+  ContainerNomeStatus,
+  TextoCargo,
+  TextoHorario,
+  TextoNome,
+  TextoStatus,
+} from "./Styles";
 import React from "react";
 
-function Sessao() {
+export default function Sessao() {
   return (
     <ContainerSessao>
       <ContainerInfoUsuario>
@@ -26,5 +35,3 @@ function Sessao() {
     </ContainerSessao>
   );
 }
-
-export default Sessao;

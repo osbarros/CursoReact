@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { FormInput, Title } from "../../components";
+import { Button, FormInput, Title } from "../../components";
 import { Container, Inputs, RegisterLink } from "./Styles";
 
 export default function Login() {
@@ -14,6 +14,7 @@ export default function Login() {
         Não possui uma conta? Faça seu cadastro{" "}
         {<Link to="/cadastro">aqui</Link>}
       </RegisterLink>
+      <Button text="Entrar" />
     </Container>
   );
 }

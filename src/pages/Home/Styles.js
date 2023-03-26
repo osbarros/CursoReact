@@ -14,8 +14,8 @@ export const Container = styled.div`
   height: 100%;
 `;
 export const CarouselContainer = styled.div``;
-export const TabelContainer = styled.div`
-  width: 100%;
+export const TableContainer = styled.div`
+  width: 90%;
   max-width: 1000px;
 
   overflow: auto;
@@ -94,10 +94,9 @@ export const HourDisplay = styled.p`
   border-radius: 10px;
 
   width: 4.5em;
+  padding: 0.2em 1em;
 
   text-align: center;
-
-  padding: 0.2em 1em;
 
   color: ${(props) => props.theme.colors.primary};
 `;

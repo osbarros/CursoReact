@@ -10,7 +10,7 @@ import {
   TableData,
   UserInfo,
   HourDisplay,
-  TabelContainer,
+  TableContainer,
 } from "./Styles";
 
 export default function Home() {
@@ -19,7 +19,7 @@ export default function Home() {
       <CarouselContainer>
         <Carousel />
       </CarouselContainer>
-      <TabelContainer>
+      <TableContainer>
         <Table>
           <TableHead>
             <TableRow>
@@ -63,7 +63,7 @@ export default function Home() {
             </TableRow>
           </TableBody>
         </Table>
-      </TabelContainer>
+      </TableContainer>
     </Container>
   );
 }

@@ -1,5 +1,5 @@
-import { EditInput, Title } from "../../components";
-import { Container, UserInfo, Button, ButtonsContainer } from "./Styles";
+import { Button, EditInput, Title } from "../../components";
+import { Container, UserInfo, ButtonsContainer } from "./Styles";
 
 export default function Edit() {
   return (
@@ -11,8 +11,8 @@ export default function Edit() {
         <EditInput name="status" label="Status:" type="text" textAreaMode />
       </UserInfo>
       <ButtonsContainer>
-        <Button>Cancelar</Button>
-        <Button>Salvar</Button>
+        <Button text="Cancelar" />
+        <Button text="Salvar" />
       </ButtonsContainer>
     </Container>
   );

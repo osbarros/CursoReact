@@ -33,7 +33,7 @@ export const RegisterLink = styled.small`
   text-align: center;
   font-size: 14px;
 
-  margin-top: 36px;
+  margin: 36px 0;
 
   a {
     text-decoration: none;

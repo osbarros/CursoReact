@@ -1,4 +1,4 @@
-import { FormInput, Title } from "../../components";
+import { Button, FormInput, Title } from "../../components";
 import { Container, Inputs } from "./Styles";
 
 export default function Register() {
@@ -21,6 +21,7 @@ export default function Register() {
         <FormInput name="role" type="text" placeHolder="Cargo" />
         <FormInput name="status" type="text" placeHolder="Status" />
       </Inputs>
+      <Button text="Registrar" />
     </Container>
   );
 }

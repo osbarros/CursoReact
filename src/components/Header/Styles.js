@@ -8,7 +8,7 @@ export const Container = styled.header`
   justify-content: space-between;
   align-items: center;
 
-  height: 132px;
+  height: 90px;
   width: 100%;
 
   padding: 22px 48px;
@@ -16,14 +16,16 @@ export const Container = styled.header`
   background-color: ${(props) => props.theme.color.primary};
 
   @media (max-width: ${firstBreakPoint}) {
-    height: 90px;
-
     padding: 11px 23px;
+  }
+
+  @media (max-width: ${secondBreakPoint}) {
+    height: 55px;
   }
 `;
 
 export const Logo = styled.img`
-  width: 232px;
+  width: 180px;
 
   @media (max-width: ${firstBreakPoint}) {
     width: 130px;
@@ -40,7 +42,7 @@ export const IconButtonsContainer = styled.div`
   justify-content: space-between;
 
   width: 100%;
-  max-width: 150px;
+  max-width: 120px;
 
   padding: 0 10px;
 
@@ -59,6 +61,9 @@ export const IconButtonsContainer = styled.div`
 
 export const IconButton = styled.button`
   all: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   color: ${(props) => props.theme.color.background};
 
@@ -69,8 +74,8 @@ export const IconButton = styled.button`
   }
 
   svg {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 
     @media (max-width: ${firstBreakPoint}) {
       width: 35px;
@@ -85,7 +90,7 @@ export const IconButton = styled.button`
 `;
 
 export const Divider = styled.div`
-  height: 60px;
+  height: 50px;
   border-right: 2px solid ${(props) => props.theme.color.background};
 
   @media (max-width: ${firstBreakPoint}) {

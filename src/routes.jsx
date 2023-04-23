@@ -12,8 +12,8 @@ const router = createBrowserRouter(
     <Route>
       <Route path="/" element={<AppLayout />}>
         <Route index element={<Home />} />
-        <Route path="edicao" element={<Edit />} />
         <Route path="login" element={<Login />} />
+        <Route path="edicao" element={<Edit />} />
         <Route path="cadastro" element={<Register />} />
       </Route>
       <Route path="*" element={<NotFound />} />

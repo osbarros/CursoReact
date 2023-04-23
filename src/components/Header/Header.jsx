@@ -8,17 +8,21 @@ import {
 import { BsPencilSquare } from "react-icons/bs";
 import { IoExitOutline } from "react-icons/io5";
 import logo from "../../assets/logo.png";
+import { Link, useNavigate } from "react-router-dom";
 
 export default function Header() {
+  const navigate = useNavigate();
   return (
     <Container>
-      <Logo src={logo} alt="CPE logo" />
+      <Link to="/">
+        <Logo src={logo} alt="CPE logo" />
+      </Link>
       <IconButtonsContainer>
-        <IconButton>
+        <IconButton onClick={() => navigate("edicao")}>
           <BsPencilSquare />
         </IconButton>
         <Divider />
-        <IconButton>
+        <IconButton onClick={() => console.log("Logout")}>
           <IoExitOutline />
         </IconButton>
       </IconButtonsContainer>

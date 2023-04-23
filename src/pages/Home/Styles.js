@@ -35,8 +35,8 @@ export const Table = styled.table`
 export const TableHead = styled.thead`
   height: 60px;
 
-  color: ${(props) => props.theme.colors.background};
-  background: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.color.background};
+  background: ${(props) => props.theme.color.primary};
 
   font-weight: 500;
 
@@ -69,7 +69,7 @@ export const UserInfo = styled.div`
   }
 
   p:last-child {
-    color: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.color.primary};
 
     @media (max-width: ${firstBreakPoint}) {
       display: none;
@@ -90,7 +90,7 @@ export const UserInfo = styled.div`
   text-overflow: ellipsis;
 `;
 export const HourDisplay = styled.p`
-  border: 1px solid ${(props) => props.theme.colors.primary};
+  border: 1px solid ${(props) => props.theme.color.primary};
   border-radius: 10px;
 
   width: 4.5em;
@@ -98,5 +98,5 @@ export const HourDisplay = styled.p`
 
   text-align: center;
 
-  color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.color.primary};
 `;

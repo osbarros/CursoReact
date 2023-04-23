@@ -1,7 +1,5 @@
-import { Carousel } from "../../components";
 import {
   Container,
-  CarouselContainer,
   Table,
   TableHead,
   TableHeader,
@@ -16,9 +14,6 @@ import {
 export default function Home() {
   return (
     <Container>
-      <CarouselContainer>
-        <Carousel />
-      </CarouselContainer>
       <TableContainer>
         <Table>
           <TableHead>

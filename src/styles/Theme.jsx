@@ -1,14 +1,18 @@
 import { ThemeProvider } from "styled-components";
 
 const theme = {
-  colors: {
+  color: {
     primary: "#ffd100",
     background: "black",
   },
 
-  fonts: {
-    primaryFamily: "Montserrat, sans-serif;",
-    primaryColor: "white",
+  font: {
+    family: {
+      primary: "Montserrat, sans-serif",
+    },
+    color: {
+      primary: "white",
+    },
   },
 };
 

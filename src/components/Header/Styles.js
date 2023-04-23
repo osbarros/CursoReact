@@ -13,7 +13,7 @@ export const Container = styled.header`
 
   padding: 22px 48px;
 
-  background-color: ${(props) => props.theme.colors.primary};
+  background-color: ${(props) => props.theme.color.primary};
 
   @media (max-width: ${firstBreakPoint}) {
     height: 90px;
@@ -44,7 +44,7 @@ export const IconButtonsContainer = styled.div`
 
   padding: 0 10px;
 
-  border: 2px solid ${(props) => props.theme.colors.background};
+  border: 2px solid ${(props) => props.theme.color.background};
   border-radius: 10px;
 
   @media (max-width: ${firstBreakPoint}) {
@@ -60,7 +60,7 @@ export const IconButtonsContainer = styled.div`
 export const IconButton = styled.button`
   all: unset;
 
-  color: ${(props) => props.theme.colors.background};
+  color: ${(props) => props.theme.color.background};
 
   cursor: pointer;
 
@@ -86,7 +86,7 @@ export const IconButton = styled.button`
 
 export const Divider = styled.div`
   height: 60px;
-  border-right: 2px solid ${(props) => props.theme.colors.background};
+  border-right: 2px solid ${(props) => props.theme.color.background};
 
   @media (max-width: ${firstBreakPoint}) {
     height: 45px;

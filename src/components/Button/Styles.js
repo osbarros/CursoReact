@@ -12,7 +12,7 @@ export const Container = styled.button`
   font-weight: 600;
   font-size: 32px;
 
-  background: ${(props) => props.theme.colors.primary};
+  background: ${(props) => props.theme.color.primary};
   border-radius: 20px;
   border: none;
 

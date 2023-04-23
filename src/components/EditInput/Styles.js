@@ -22,7 +22,7 @@ export const Label = styled.label`
   font-weight: 600;
   font-size: 24px;
 
-  color: ${(props) => props.theme.colors.primary};
+  color: ${(props) => props.theme.color.primary};
 
   @media (max-width: ${firstBreakPoint}) {
     font-size: 16px;
@@ -38,7 +38,7 @@ export const Input = styled.input`
   padding: 11px 18px;
 
   border-radius: 10px;
-  border: 2px solid ${(props) => props.theme.colors.primary};
+  border: 2px solid ${(props) => props.theme.color.primary};
 `;
 
 export const TextArea = styled.textarea`
@@ -50,7 +50,7 @@ export const TextArea = styled.textarea`
   padding: 11px 18px;
 
   border-radius: 10px;
-  border: 2px solid ${(props) => props.theme.colors.primary};
+  border: 2px solid ${(props) => props.theme.color.primary};
 
   resize: none;
 `;

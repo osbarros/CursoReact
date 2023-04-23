@@ -37,7 +37,7 @@ export const RegisterLink = styled.small`
 
   a {
     text-decoration: none;
-    color: ${(props) => props.theme.colors.primary};
+    color: ${(props) => props.theme.color.primary};
 
     &:hover {
       opacity: 0.7;

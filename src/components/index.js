@@ -4,4 +4,3 @@ export { default as Title } from "./Title/Title";
 export { default as Button } from "./Button/Button";
 export { default as FormInput } from "./FormInput/FormInput";
 export { default as EditInput } from "./EditInput/EditInput";
-export { default as Carousel } from "./Carousel/Carousel";

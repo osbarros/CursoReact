@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const firstBreakPoint = "500px";
 
-export const Container = styled.div`
+export const Form = styled.form`
   display: flex;
   justify-content: center;
   align-items: center;

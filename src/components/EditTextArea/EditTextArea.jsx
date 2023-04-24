@@ -1,6 +1,6 @@
-import { Container, Label, Input, ErrorMessage } from "./Styles";
+import { Container, Label, TextArea, ErrorMessage } from "./Styles";
 
-export default function EditInput({
+export default function EditTextArea({
   label,
   name,
   placeHolder,
@@ -13,7 +13,7 @@ export default function EditInput({
   return (
     <Container>
       <Label htmlFor={name}>{label}</Label>
-      <Input
+      <TextArea
         id={name}
         placeholder={placeHolder}
         type={type}

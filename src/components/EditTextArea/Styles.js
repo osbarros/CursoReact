@@ -29,7 +29,8 @@ export const Label = styled.label`
     text-align: left;
   }
 `;
-export const Input = styled.input`
+
+export const TextArea = styled.textarea`
   width: 100%;
   max-width: 400px;
 
@@ -39,8 +40,9 @@ export const Input = styled.input`
 
   border-radius: 10px;
   border: 2px solid ${(props) => props.theme.color.primary};
-`;
 
+  resize: none;
+`;
 export const ErrorMessage = styled.p`
   color: red;
 `;

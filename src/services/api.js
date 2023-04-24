@@ -12,7 +12,7 @@ api.interceptors.response.use(
     const isUnauthorizedError = error?.response?.status === 401;
     if (isUnauthorizedError) logout();
 
-    return error.response;
+    return Promise.reject(error);
   }
 );
 

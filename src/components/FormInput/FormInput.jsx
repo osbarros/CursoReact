@@ -5,7 +5,7 @@ export default function FormInput({
   placeHolder,
   type,
   errors,
-  // register,
+  register,
 }) {
   const errorMessage = errors?.[name]?.message;
   return (
@@ -14,8 +14,8 @@ export default function FormInput({
         id={name}
         placeholder={placeHolder}
         type={type}
-        // error={errorMessage}
-        // {...register(name)}
+        error={errorMessage}
+        {...register(name)}
       />
       {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
     </Container>

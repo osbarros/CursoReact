@@ -3,7 +3,7 @@ import styled from "styled-components";
 const firstBreakPoint = "700px";
 const secondBreakPoint = "500px";
 
-export const Container = styled.div`
+export const Form = styled.form`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,19 +31,6 @@ export const UserInfo = styled.div`
 
   @media (max-width: ${secondBreakPoint}) {
     padding: 50px 40px;
-  }
-`;
-export const ButtonsContainer = styled.div`
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-
-  width: 100%;
-  max-width: 634px;
-
-  @media (max-width: ${secondBreakPoint}) {
-    flex-direction: column;
-    gap: 15px;
   }
 `;
 export const Button = styled.button`

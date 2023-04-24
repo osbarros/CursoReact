@@ -1,26 +1,29 @@
-import { Container, Label, Input, ErrorMessage } from "./Styles";
+import { Container, Select, ErrorMessage } from "./Styles";
 
-export default function EditInput({
-  label,
+export default function FormSelect({
   name,
   placeHolder,
   type,
   errors,
-  defaultValue,
   register,
+  data,
 }) {
   const errorMessage = errors?.[name]?.message;
   return (
     <Container>
-      <Label htmlFor={name}>{label}</Label>
-      <Input
+      <Select
         id={name}
         placeholder={placeHolder}
         type={type}
-        defaultValue={defaultValue}
         error={errorMessage}
         {...register(name)}
-      />
+      >
+        {data.map((text) => (
+          <option value={text} key={text}>
+            {text}
+          </option>
+        ))}
+      </Select>
       {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
     </Container>
   );

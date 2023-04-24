@@ -11,7 +11,7 @@ export const Container = styled.div`
   width: 100%;
 `;
 
-export const Input = styled.input`
+export const Select = styled.select`
   width: 100%;
   max-width: 550px;
 

@@ -19,6 +19,10 @@ export const TableContainer = styled.div`
 
   overflow: auto;
 
+  h1 {
+    text-align: center;
+  }
+
   /* width */
   ::-webkit-scrollbar {
     width: 10px;
@@ -108,10 +112,31 @@ export const HourDisplay = styled.p`
   border: 1px solid ${(props) => props.theme.color.primary};
   border-radius: 10px;
 
-  width: 4.5em;
   padding: 0.2em 1em;
 
   text-align: center;
 
   color: ${(props) => props.theme.color.primary};
+`;
+
+export const ButtonsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
+
+  margin-top: 35px;
+
+  button {
+    font-size: 16px;
+  }
+
+  width: 100%;
+  max-width: 634px;
+
+  @media (max-width: ${firstBreakPoint}) {
+    flex-direction: column;
+    gap: 15px;
+  }
 `;

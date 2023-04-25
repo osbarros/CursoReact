@@ -1,38 +1,38 @@
 import styled from "styled-components";
 
-const firstBreakPoint = "500px";
-const secondBreakPoint = "300px";
+const firstBreakPoint = "50rem";
+const secondBreakPoint = "30rem";
 
 export const Container = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  height: 90px;
+  height: 9rem;
   width: 100%;
 
-  padding: 22px 48px;
+  padding: 2.2rem 4.8rem;
 
   background-color: ${(props) => props.theme.color.primary};
 
   @media (max-width: ${firstBreakPoint}) {
-    padding: 11px 23px;
+    padding: 1.1rem 2.3rem;
   }
 
   @media (max-width: ${secondBreakPoint}) {
-    height: 55px;
+    height: 5.5rem;
   }
 `;
 
 export const Logo = styled.img`
-  width: 180px;
+  width: 18rem;
 
   @media (max-width: ${firstBreakPoint}) {
-    width: 130px;
+    width: 13rem;
   }
 
   @media (max-width: ${secondBreakPoint}) {
-    width: 100px;
+    width: 10rem;
   }
 `;
 
@@ -42,20 +42,20 @@ export const IconButtonsContainer = styled.div`
   justify-content: space-between;
 
   width: 100%;
-  max-width: 120px;
+  max-width: 12rem;
 
-  padding: 0 10px;
+  padding: 0 1rem;
 
   border: 2px solid ${(props) => props.theme.color.background};
-  border-radius: 10px;
+  border-radius: 1rem;
 
   @media (max-width: ${firstBreakPoint}) {
-    max-width: 100px;
+    max-width: 10rem;
   }
 
   @media (max-width: ${secondBreakPoint}) {
-    max-width: 70px;
-    padding: 0 6px;
+    max-width: 7rem;
+    padding: 0 0.6rem;
   }
 `;
 
@@ -74,30 +74,30 @@ export const IconButton = styled.button`
   }
 
   svg {
-    width: 40px;
-    height: 40px;
+    width: 4rem;
+    height: 4rem;
 
     @media (max-width: ${firstBreakPoint}) {
-      width: 35px;
-      height: 35px;
+      width: 3.5rem;
+      height: 3.5rem;
     }
 
     @media (max-width: ${secondBreakPoint}) {
-      width: 20px;
-      height: 20px;
+      width: 2rem;
+      height: 2rem;
     }
   }
 `;
 
 export const Divider = styled.div`
-  height: 50px;
-  border-right: 2px solid ${(props) => props.theme.color.background};
+  height: 5rem;
+  border-right: 0.2rem solid ${(props) => props.theme.color.background};
 
   @media (max-width: ${firstBreakPoint}) {
-    height: 45px;
+    height: 4.5rem;
   }
 
   @media (max-width: ${secondBreakPoint}) {
-    height: 26px;
+    height: 2.6rem;
   }
 `;

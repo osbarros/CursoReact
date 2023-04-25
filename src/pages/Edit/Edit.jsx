@@ -39,7 +39,7 @@ export default function Edit() {
 
   return (
     <Form onSubmit={handleSubmit(onSubmit)}>
-      <Title text="EDITAR" marginBottom="57px" responsiveMarginBottom="50px" />
+      <Title text="EDITAR" marginBottom="5.rem" responsiveMarginBottom="5rem" />
       <UserInfo>
         <EditInput
           name="name"

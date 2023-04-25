@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import {
+  Loading,
   Container,
   Table,
   TableHead,
@@ -13,22 +14,32 @@ import {
   ButtonsContainer,
 } from "./Styles";
 import api from "../../services/api";
-import { formatSession, formatSessions } from "../../utils/formatSessions";
 import { Button } from "../../components";
 import { getUser } from "../../services/auth";
 
 export default function Home() {
   const user = getUser();
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [sessions, setSessions] = useState([]);
+  const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone; // Browser timezone
 
+  const getSessions = async () => {
+    try {
+      const res = await api.get(`/sessions/${encodeURIComponent(timezone)}`);
+      setSessions(res.data);
+    } catch (error) {
+      console.error(error);
+      alert("Erro ao consultar as sessões ativas. Tente novamente mais tarde");
+    } finally {
+      setIsLoading(false);
+    }
+  };
   const startSession = async () => {
     try {
       setIsLoading(true);
-      const res = await api.post("/sessions", { userId: user?._id });
-      const newSession = formatSession({ session: res?.data });
+      await api.post("/sessions", { userId: user?._id });
+      await getSessions();
 
-      setSessions((prevSessions) => [newSession, ...prevSessions]);
       alert("Sessão iniciada com sucesso!");
     } catch (error) {
       console.error(error);
@@ -40,11 +51,10 @@ export default function Home() {
   const endSession = async () => {
     try {
       setIsLoading(true);
-      const res = await api.post(`/sessions/user/${user?._id}`);
-      setSessions((prevSessions) =>
-        prevSessions?.filter(({ _id }) => _id !== res?.data?._id)
-      );
-      alert("Sessão finalizada com sucesso!");
+      await api.delete("/sessions", { data: { userId: user?._id } });
+      await getSessions();
+
+      alert("Bom descanso!");
     } catch (error) {
       console.error(error);
       alert("Falha ao finalizar a sessão. Tente novamente mais tarde");
@@ -52,42 +62,17 @@ export default function Home() {
       setIsLoading(false);
     }
   };
-  const getSessions = async () => {
-    try {
-      setIsLoading(true);
-      const res = await api.get("/sessions");
-      const formatedSessions = formatSessions({ sessions: res?.data });
-
-      setSessions(formatedSessions);
-    } catch (error) {
-      console.error(error);
-      alert("Erro ao consultar as sessões ativas. Tente novamente mais tarde");
-    } finally {
-      setIsLoading(false);
-    }
-  };
 
   useEffect(() => {
     getSessions();
-  }, []);
-  useEffect(() => {
+
     const minuteInMilliseconds = 60000;
-    const interval = setInterval(() => {
-      console.log(sessions);
-      if (!sessions?.length) return;
-
-      const updatedSessions = formatSessions({
-        sessions,
-        formatStartedAt: false,
-      });
-
-      setSessions(updatedSessions);
-    }, minuteInMilliseconds);
+    const interval = setInterval(getSessions, minuteInMilliseconds);
 
     return () => clearInterval(interval);
-  }, [sessions.length]);
+  }, []);
 
-  if (isLoading) return <h1>Carregando...</h1>;
+  if (isLoading) return <Loading>Carregando...</Loading>;
   return (
     <Container>
       <TableContainer>
@@ -102,7 +87,7 @@ export default function Home() {
             </TableHead>
             <TableBody>
               {sessions?.map((session) => (
-                <SessionData key={session?._id} {...session} />
+                <SessionData key={session._id} {...session} />
               ))}
             </TableBody>
           </Table>
@@ -126,19 +111,19 @@ export default function Home() {
   );
 }
 
-const SessionData = ({ user, formatedStartedAt, duration }) => (
+const SessionData = ({ name, status, role, startedAt, duration }) => (
   <TableRow>
     <TableData>
       <UserInfo>
         <p>
-          {user?.name}
-          <span>"{user?.status}"</span>
+          {name}
+          <span>"{status}"</span>
         </p>
-        <p>{user?.role}</p>
+        <p>{role}</p>
       </UserInfo>
     </TableData>
     <TableData>
-      <HourDisplay>{formatedStartedAt}</HourDisplay>
+      <HourDisplay>{startedAt}</HourDisplay>
     </TableData>
     <TableData>
       <HourDisplay>{duration}</HourDisplay>

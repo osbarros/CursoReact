@@ -1,9 +1,9 @@
 import { z } from "zod";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Button, FormInput, FormSelect, Title } from "../../components";
-import { Form, Inputs } from "./Styles";
+import { Form, Inputs, LoginLink } from "./Styles";
 import api from "../../services/api";
 
 export default function Register() {
@@ -53,8 +53,8 @@ export default function Register() {
     <Form onSubmit={handleSubmit(onSubmit)}>
       <Title
         text="CADASTRO"
-        marginBottom="52px"
-        responsiveMarginBottom="50px"
+        marginBottom="5.2rem"
+        responsiveMarginBottom="5rem"
       />
       <Inputs>
         <FormInput
@@ -101,6 +101,9 @@ export default function Register() {
           register={register}
         />
       </Inputs>
+      <LoginLink>
+        Já possui uma conta? Faça o login {<Link to="/login">aqui</Link>}
+      </LoginLink>
       <Button text="Registrar" />
     </Form>
   );

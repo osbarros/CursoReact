@@ -2,6 +2,11 @@ import styled from "styled-components";
 
 const firstBreakPoint = "500px";
 
+export const Loading = styled.h1`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
 export const Container = styled.div`
   display: flex;
   justify-content: center;
@@ -15,7 +20,7 @@ export const Container = styled.div`
 `;
 export const TableContainer = styled.div`
   width: 90%;
-  max-width: 1000px;
+  max-width: 100rem;
 
   overflow: auto;
 
@@ -25,20 +30,20 @@ export const TableContainer = styled.div`
 
   /* width */
   ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+    width: 1rem;
+    height: 1rem;
   }
 
   /* Track */
   ::-webkit-scrollbar-track {
     background: #f1f1f1;
-    border-radius: 5px;
+    border-radius: 0.5rem;
   }
 
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #888;
-    border-radius: 5px;
+    border-radius: 0.5rem;
   }
 
   /* Handle on hover */
@@ -51,17 +56,17 @@ export const Table = styled.table`
 
   border-spacing: 0;
   border-collapse: separate;
-  border-radius: 20px;
-  border: 1px solid black;
+  border-radius: 2rem;
+  border: 0.1rem solid black;
 
   overflow: hidden;
 
   text-align: left;
 `;
 export const TableHead = styled.thead`
-  height: 60px;
+  height: 6rem;
 
-  padding: 0 25px;
+  padding: 0 2.5rem;
   color: ${(props) => props.theme.color.background};
   background: ${(props) => props.theme.color.primary};
 
@@ -110,7 +115,7 @@ export const UserInfo = styled.div`
 `;
 export const HourDisplay = styled.p`
   border: 1px solid ${(props) => props.theme.color.primary};
-  border-radius: 10px;
+  border-radius: 1rem;
 
   padding: 0.2em 1em;
 
@@ -124,19 +129,19 @@ export const ButtonsContainer = styled.div`
   justify-content: center;
   align-items: center;
 
-  gap: 20px;
+  gap: 2rem;
 
-  margin-top: 35px;
+  margin-top: 3.5rem;
 
   button {
-    font-size: 16px;
+    font-size: 1.6rem;
   }
 
   width: 100%;
-  max-width: 634px;
+  max-width: 63.4rem;
 
   @media (max-width: ${firstBreakPoint}) {
     flex-direction: column;
-    gap: 15px;
+    gap: 1.5rem;
   }
 `;

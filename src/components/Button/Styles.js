@@ -5,15 +5,15 @@ const secondBreakPoint = "500px";
 
 export const Container = styled.button`
   width: 100%;
-  max-width: 200px;
+  max-width: 20rem;
 
-  padding: 10px 15px;
+  padding: 1rem 1.5rem;
 
   font-weight: 600;
-  font-size: 32px;
+  font-size: 3.2rem;
 
   background: ${(props) => props.theme.color.primary};
-  border-radius: 20px;
+  border-radius: 2rem;
   border: none;
 
   cursor: pointer;
@@ -23,10 +23,10 @@ export const Container = styled.button`
   }
 
   @media (max-width: ${firstBreakPoint}) {
-    font-size: 26px;
+    font-size: 2.6rem;
   }
 
   @media (max-width: ${secondBreakPoint}) {
-    font-size: 20px;
+    font-size: 2rem;
   }
 `;

@@ -2,8 +2,8 @@ import { Container } from "./Styles";
 
 export default function Title({
   text,
-  marginBottom = "90px",
-  responsiveMarginBottom = "60px",
+  marginBottom = "9rem",
+  responsiveMarginBottom = "6rem",
 }) {
   return (
     <Container

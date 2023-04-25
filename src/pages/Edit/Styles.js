@@ -17,33 +17,33 @@ export const UserInfo = styled.div`
   align-items: center;
   flex-direction: column;
 
-  gap: 56px;
+  gap: 5.6rem;
 
   width: 80%;
-  max-width: 634px;
-  margin: 0 auto 70px auto;
+  max-width: 63.4rem;
+  margin: 0 auto 7rem auto;
 
-  padding: 50px 60px;
+  padding: 5rem 6rem;
 
   background: #313131;
 
-  border-radius: 10px;
+  border-radius: 1rem;
 
   @media (max-width: ${secondBreakPoint}) {
-    padding: 50px 40px;
+    padding: 50px 4rem;
   }
 `;
 export const Button = styled.button`
   width: 100%;
-  max-width: 200px;
+  max-width: 20rem;
 
-  padding: 10px 15px;
+  padding: 10px 1.5rem;
 
   font-weight: 600;
-  font-size: 32px;
+  font-size: 3.2rem;
 
   background: ${(props) => props.theme.color.primary};
-  border-radius: 20px;
+  border-radius: 2rem;
   border: none;
 
   cursor: pointer;
@@ -53,10 +53,10 @@ export const Button = styled.button`
   }
 
   @media (max-width: ${firstBreakPoint}) {
-    font-size: 26px;
+    font-size: 2.6rem;
   }
 
   @media (max-width: ${secondBreakPoint}) {
-    font-size: 20px;
+    font-size: 2rem;
   }
 `;

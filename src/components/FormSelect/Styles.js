@@ -6,19 +6,19 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
 
-  gap: 15px;
+  gap: 1.5rem;
 
   width: 100%;
 `;
 
 export const Select = styled.select`
   width: 100%;
-  max-width: 550px;
+  max-width: 55rem;
 
-  padding: 11px 18px;
-  border-radius: 25px;
+  padding: 1.1rem 1.8rem;
+  border-radius: 2.5rem;
 
-  font-size: 14px;
+  font-size: 1.4rem;
 `;
 
 export const ErrorMessage = styled.p`

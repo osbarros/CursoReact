@@ -9,13 +9,13 @@ export const Form = styled.form`
 
   flex-direction: column;
 
-  padding: 0 70px;
+  padding: 0 7rem;
 
   width: 100%;
   height: 100%;
 
   @media (max-width: ${firstBreakPoint}) {
-    padding: 0 50px;
+    padding: 0 5rem;
   }
 `;
 export const Inputs = styled.div`
@@ -24,16 +24,16 @@ export const Inputs = styled.div`
   align-items: center;
   flex-direction: column;
 
-  gap: 45px;
+  gap: 4.5rem;
 
   width: 100%;
 `;
 export const RegisterLink = styled.small`
   text-decoration: none;
   text-align: center;
-  font-size: 14px;
+  font-size: 1.4rem;
 
-  margin: 36px 0;
+  margin: 3.6rem 0;
 
   a {
     text-decoration: none;
@@ -45,8 +45,8 @@ export const RegisterLink = styled.small`
   }
 
   @media (max-width: ${firstBreakPoint}) {
-    margin-top: 19px;
+    margin-top: 1.9rem;
 
-    font-size: 12px;
+    font-size: 1.2rem;
   }
 `;

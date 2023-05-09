@@ -46,7 +46,7 @@ export const IconButtonsContainer = styled.div`
 
   padding: 0 1rem;
 
-  border: 2px solid ${(props) => props.theme.color.background};
+  border: 0.2rem solid ${(props) => props.theme.color.background};
   border-radius: 1rem;
 
   @media (max-width: ${firstBreakPoint}) {

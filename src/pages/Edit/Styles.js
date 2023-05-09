@@ -30,14 +30,14 @@ export const UserInfo = styled.div`
   border-radius: 1rem;
 
   @media (max-width: ${secondBreakPoint}) {
-    padding: 50px 4rem;
+    padding: 5rem 4rem;
   }
 `;
 export const Button = styled.button`
   width: 100%;
   max-width: 20rem;
 
-  padding: 10px 1.5rem;
+  padding: 1rem 1.5rem;
 
   font-weight: 600;
   font-size: 3.2rem;

@@ -114,7 +114,7 @@ export const UserInfo = styled.div`
   text-overflow: ellipsis;
 `;
 export const HourDisplay = styled.p`
-  border: 1px solid ${(props) => props.theme.color.primary};
+  border: 0.1rem solid ${(props) => props.theme.color.primary};
   border-radius: 1rem;
 
   padding: 0.2em 1em;

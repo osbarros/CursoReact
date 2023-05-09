@@ -15,7 +15,6 @@ export function formatSession({ session, formatStartedAt = true }) {
 }
 
 export function formatSessions({ sessions, formatStartedAt = true }) {
-  console.log(sessions);
   return sessions?.map((session) =>
     formatSession({ session, formatStartedAt })
   );
